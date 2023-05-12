@@ -1,0 +1,14 @@
+Chapter 39: New component composition
+
+One interesting concept of composition -> What if we want to create a component as a shell for other content
+
+At the moment we have highly specific components 
+
+All these elements are just configured through props
+
+Sometimes however you want to have an composition elements
+
+In web development when you hear card it is sometype of container which is wrapped around the components
+
+Out of the box you just cannot use the custom component nested within another component you need to do some stuff 
+here so that you can get the your other custom components 
