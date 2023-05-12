@@ -1,0 +1,20 @@
+Chapter 30: Introducing JSX
+
+
+JSX = Javascript XML
+
+ex
+fucntion app(){
+return(
+<div>
+Let's get started
+</div> 
+)
+}
+
+In chrome when you go to dev tools under sources we can find all the files that are downloaded for displaying this page.
+
+When you look under static/js -> you can find a file which is almost cryptic and those files are something that are 
+used for converting the whole project into javascript file. If you look at the starting chapter it does consists of only 
+Lets get started page. But in this case the js files under static/js contains the whole library code.
+
