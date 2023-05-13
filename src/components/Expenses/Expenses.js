@@ -1,11 +1,19 @@
 import ExpenseItem from './ExpenseItem';
-// import Card from './UI/Card';
 import './Expenses.css';
-import Card from './UI/Card';
+import Card from '../UI/Card';
+import ExpensesFilter from '../ExpensesFilter/ExpensesFilter';
+import { useState } from 'react';
 
 function Expenses(props) {
+    const[filteredYear, setFilteredYear]=useState('');
+    const selectOnChangeValue = (value) => {
+        console.log('Here the value is coming out', value)
+        setFilteredYear(value)
+    }
     return (
         <Card className='expenses'>
+            <ExpensesFilter onChangeValue={selectOnChangeValue}/>
+            <h1 className='expenses__header'>Expense Tracker</h1>
             <ExpenseItem
                 title={props.items[0].title}
                 amount={props.items[0].amount}

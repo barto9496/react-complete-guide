@@ -1,7 +1,8 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-  const expenses = [
+  let expenses = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -23,9 +24,19 @@ function App() {
     },
     { id: 'e4', title: 'INS', amount: 294.67, date: new Date(2023, 12, 12) },
   ]
+
+  const addExpenseDataToArray = (enteredExpenseData) => {
+    expenses = [
+      ...expenses,
+      enteredExpenseData
+    ]
+    console.log('Find expenses here',expenses)
+  }
+
   return (
     <div>
       <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseDataToArray} />
       <Expenses items={expenses} />
     </div>
   );

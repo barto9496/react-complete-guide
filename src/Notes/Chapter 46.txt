@@ -1,0 +1,7 @@
+Chapter 46: Listening to events & working with states
+
+So this is our demo application at the moment, we can see it is a static state which we can see here.
+
+Lets see how to react to user states
+
+Lets see how to something clickable in the expense item
