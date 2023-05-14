@@ -5,17 +5,19 @@ import ExpensesFilter from '../ExpensesFilter/ExpensesFilter';
 import { useState } from 'react';
 
 function Expenses(props) {
-    const [filteredYear, setFilteredYear] = useState('2020');
+    const [filteredYear, setFilteredYear] = useState('2022');
     const selectOnChangeValue = (value) => {
-        props.onSelectedYear(value)
         setFilteredYear(value)
     }
 
+    const filteredExpenseArray = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear
+    })
     return (
         <Card className='expenses'>
             <ExpensesFilter selected={filteredYear} onChangeValue={selectOnChangeValue} />
             <h1 className='expenses__header'>Expense Tracker</h1>
-            {props.items.map( item => { 
+            {filteredExpenseArray.map( item => { 
                 return (
                     <ExpenseItem
                         key={item.id}

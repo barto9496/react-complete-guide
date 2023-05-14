@@ -38,18 +38,13 @@ function App() {
       return [enteredExpenseData, ...prevState]
     })
   }
-  const selectedYear = (yearVal) => {
-    let expenseArr = initialExpenses.filter(expense => {
-      return expense.date.getFullYear().toString() === yearVal
-    })
-    setExpenses(expenseArr)
-  }
+  
 
   return (
     <div>
       <h2>Let's get started!</h2>
       <NewExpense onAddExpense={addExpenseDataToArray} />
-      <Expenses onSelectedYear={selectedYear} items={expenses} />
+      <Expenses items={expenses} />
     </div>
   );
 }
