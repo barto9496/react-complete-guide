@@ -20,7 +20,6 @@ export default function ExpenseForm(props) {
     // })
 
     const titleChangeHandler = (event) => {
-        console.log(event.target.value)
         setTitleChangeHandler(event.target.value)
         // setUserInput({
         //     ...userInput,
@@ -29,7 +28,6 @@ export default function ExpenseForm(props) {
     }
 
     const amountChangeHandler = (event) => {
-        console.log(event.target.value)
         setAmountChangeHandler(event.target.value)
         // setUserInput({
         //     ...userInput,
@@ -38,7 +36,6 @@ export default function ExpenseForm(props) {
     }
 
     const dateChangeHandler = (event) => {
-        console.log(event.target.value)
         setDateChangeHandler(event.target.value)
         // setUserInput({
         //     ...userInput,
@@ -53,8 +50,6 @@ export default function ExpenseForm(props) {
             amount: enteredAmount,
             date: new Date(enteredDate)
         }
-        console.log(props)
-        // console.log(props.saveExpenseDataHandler(expenseData))
         props.onSaveExpenseData(expenseData)
         setAmountChangeHandler(1)
         setDateChangeHandler('2019-01-01')

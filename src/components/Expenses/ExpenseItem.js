@@ -1,7 +1,6 @@
 import ExpenseDate from './ExpenseDate'
 import './ExpenseItem.css'
 import Card from '../UI/Card'
-import { useState } from 'react'
 /**
  * You can see that this would throw an error -> You cannot have two root elements in one JSX file
  * Why is not allowed? Later we'll know 
@@ -23,21 +22,13 @@ function ExpenseItem(props) {
     /**
      * useState should always be called inside the component function
      */
-
-    const [title, setTitle] = useState(props.title);
-    const clickHandler = () => {
-        setTitle('Updated!');
-    }
     return (
         <Card className='expense-item'>
             <ExpenseDate date={props.date} />
             <div className='expense-item__description'>
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <div className='expense-item__price'>${props.amount}</div>
             </div>
-            <button onClick={clickHandler} >
-                Change title
-            </button>
         </Card>
     )
 }
