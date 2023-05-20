@@ -1,3 +1,0 @@
-Chapter 32: Building first components
-
-Its advised to have one file per component. In react project you'll have so many files

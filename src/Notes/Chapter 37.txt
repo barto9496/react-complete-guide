@@ -1,3 +1,0 @@
-Chapter 37: Adding normal Javascript to react files
-
-We had first custom component

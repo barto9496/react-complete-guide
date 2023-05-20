@@ -1,4 +1,0 @@
-Chapter 31: How react works
-
-React is basically where you build your own custom HTML elements. React is basically all about 
-components(basically a custom html element) 

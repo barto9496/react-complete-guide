@@ -1,8 +1,0 @@
-Chapter 45: Module introduction of User states & Interaction
-
-Very important concept of states in react -> Declarative approach -> Here we need to know that react is a single page application
-where in the final states are divided.
-
-1. Handling user events
-2. Reaching a final state on UI while working with states
-3. A closer look at components and state
