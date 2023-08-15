@@ -1,41 +1,26 @@
-import { useState } from 'react';
+import React, { useState, Fragment } from 'react';
+
 import AddUser from './components/Users/AddUser';
 import UsersList from './components/Users/UsersList';
 
-const App = () => {
+function App() {
+  const [usersList, setUsersList] = useState([]);
 
-  const [usersListChange, setUsersList] = useState([])
-
-  const onDeleteHandler = (id) => {
-    setUsersList(prevList => {
-      return prevList.filter(listItem => {
-        return listItem.id !== id
-      })
-    })
-  }
-
-  const onUserDetailsChangeHandler = (userName, userAge) => {
-    setUsersList(prevList => {
+  const addUserHandler = (uName, uAge) => {
+    setUsersList((prevUsersList) => {
       return [
-        ...prevList,
-        {
-          name: userName,
-          age: userAge,
-          id: Math.random()
-        }
-      ]
-    })
-  }
+        ...prevUsersList,
+        { name: uName, age: uAge, id: Math.random().toString() },
+      ];
+    });
+  };
 
   return (
-    <div className='baseDiv' >
-      <h2 style={{ textAlign: 'center', color: 'white' }}> User details </h2>
-      <div>
-        <AddUser onUserDetailsChange={onUserDetailsChangeHandler} />
-        <UsersList usersList={usersListChange} onDelete={onDeleteHandler} />
-      </div>
-    </div>
-  )
-};
+    <Fragment>
+      <AddUser onAddUser={addUserHandler} />
+      <UsersList users={usersList} />
+    </Fragment>
+  );
+}
 
 export default App;
