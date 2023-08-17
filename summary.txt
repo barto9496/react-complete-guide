@@ -81,3 +81,17 @@ How to use a portals: Portals need two things :
 
 1. Place where you want to port the component to
 2. The component which needs to be ported
+
+
+
+Working with Refs. References what do refs do, refs are quite powerful they allow us to access other dom elements and work with
+them.
+
+Lets take an example where we have inputs and when we have inputs we manage those using the states which are then fed to the input. 
+SO basically what happens there is that you get the input keystorke and then store it in the input so basically typing. Which we don't
+need to do. So, what can be done in that situation is we can use refs but refs aren't just limited to that
+
+React uncontrolled are the components which aren't controlled by react. Rather these are controlled by the user hence
+they're uncontrolled react components. 
+
+React controls the components those kinds are called controlled components. 
