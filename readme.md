@@ -1,3 +1,3 @@
-# *__10^th^ Module__*
+# *__10<sup>th</sup> Module__*
 
 > Introduction
